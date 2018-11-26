@@ -1,5 +1,9 @@
+#ifdef _WIN32
 #include "stdafx.h"
+#endif
+#include <string.h>
 #include "CollectorPluginInstance.h"
+
 
 
 CollectorPluginInstance::CollectorPluginInstance()

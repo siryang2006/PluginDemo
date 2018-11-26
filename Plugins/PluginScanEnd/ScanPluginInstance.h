@@ -1,4 +1,3 @@
-#pragma once
 #include <PluginInstance.h>
 class ScanPluginInstance :
 	public PluginInstance

@@ -1,6 +1,7 @@
 #ifndef PLUGININSTANCE_INCLUDE
 #define PLUGININSTANCE_INCLUDE
 
+#include <stdio.h>
 #include <string>
 #include <vector>
 #include <assert.h>

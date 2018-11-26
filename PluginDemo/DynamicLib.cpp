@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "DynamicLib.h"
 
 #ifndef NULL
@@ -34,16 +35,16 @@ const char* DynamicLib::GetName() const
 }
 
 #if defined(__unix__) || defined(unix)
+#include <string.h>
 #include <dlfcn.h>
-
 bool DynamicLib::LoadLib(const char* strLibName)
 {
 	std::string strName = strLibName;
 	strName += ".so";
 	m_hDynLib = dlopen(strName.c_str(), RTLD_LAZY);
-	if (pLibrary == NULL)
+	if (m_hDynLib == NULL)
 	{
-		return 0;
+	    return 0;
 	}
 	m_pszLibName = strdup(strLibName);
 
